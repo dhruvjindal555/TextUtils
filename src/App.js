@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import Alerts from './components/Alerts';
 // import {
 //   BrowserRouter as Router,
