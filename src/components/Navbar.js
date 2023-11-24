@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
 
-export default function Navbar({ title,mode,toggleMode,setRed,setGreen,setBlue}) {
+export default function Navbar({ title,mode,toggleMode,setColor}) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${mode} bg-${mode}`}>
       <div className="container-fluid">
@@ -20,15 +20,15 @@ export default function Navbar({ title,mode,toggleMode,setRed,setGreen,setBlue})
               <a className="nav-link" href="#">About</a>
             </li>
           </ul>
-          <div className='d-flex justify-content-evenly w-25'>
+          <div className='d-flex justify-content-evenly '>
               <div> 
-                <button className='pointer rounded-pill px-3 ' onClick={setRed}  style={{color:"red"}}>Red</button>
+                <button className='pointer rounded-circle mx-1 ' onClick={()=>{setColor("red")}}  style={{color:"red",height:"30px",width:"30px",backgroundColor:'red'}}></button>
               </div>
               <div> 
-                <button className='pointer rounded-pill px-3' onClick={setGreen} style={{color:"green"}}>Green</button>
+                <button className='pointer rounded-circle mx-1'  onClick={()=>{setColor("green")}} style={{color:"green",height:"30px",width:"30px",backgroundColor:'green'}}></button>
               </div>
               <div> 
-                <button className='pointer rounded-pill px-3' onClick={setBlue} style={{color:"blue"}}>Blue</button>
+                <button className='pointer rounded-circle mx-1'  onClick={()=>{setColor("blue")}} style={{color:"blue",height:"30px",width:"30px",backgroundColor:'blue'}}></button>
               </div>
             
           </div>

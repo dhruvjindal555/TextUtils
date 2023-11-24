@@ -42,28 +42,16 @@ function App() {
       showAlert("Light mode has been enabled", "success")
     }
   }
-  const setRed = () => {
-    setMode("red")
-    document.body.style.backgroundColor = "red"
-    showAlert(`Red mode has been enabled`, "success")
-
-  }
-  const setGreen = () => {
-    setMode("green")
-    document.body.style.backgroundColor = "green"
-    showAlert(`Green mode has been enabled`, "success")
-
-  }
-  const setBlue = () => {
-    setMode("blue")
-    document.body.style.backgroundColor = "blue"
-    showAlert(`Blue mode has been enabled`, "success")
+  const setColor = (color) => {
+    setMode(color)
+    document.body.style.backgroundColor = color
+    showAlert(`${color} mode has been enabled`, "success")
 
   }
   return (
     <>
       {/* <Router> */}
-      <Navbar title="textutils" mode={mode} toggleMode={toggleMode} setRed={setRed} setGreen={setGreen} setBlue={setBlue} />
+      <Navbar title="textutils" mode={mode} toggleMode={toggleMode} setColor={setColor} />
       <Alerts alert={alert} />
       <div className='container'>
         {/* <Routes> */}
